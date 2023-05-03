@@ -1,0 +1,19 @@
+import java.util.*;
+public class ArrAndSet {
+    public static void main(String[] args) {
+        ArrayList<String> name = new ArrayList<>();
+        name.add("Сергей");
+        name.add("Елена");
+        name.add("Алексей");
+        name.add("Сергей");
+        name.add("Вадим");
+        name.add("Сергей");
+
+        changeKeyAndValues(name);
+    }
+    public static void changeKeyAndValues(ArrayList<String> arrName) {
+        HashSet<String> arrUniqueName = new HashSet<String>();
+        arrUniqueName.addAll(arrName);
+        System.out.println(arrUniqueName);
+    }
+}
