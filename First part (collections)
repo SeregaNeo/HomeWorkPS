@@ -1,0 +1,25 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class Main {
+    public static void main(String[] args) {
+        HashMap<Integer, String> nameAndAge = new HashMap<>();
+        nameAndAge.put(30, "Сергей");
+        nameAndAge.put(35, "Елена");
+        nameAndAge.put(40, "Алексей");
+
+        changeKeyAndValues(nameAndAge);
+
+    }
+
+    public static void changeKeyAndValues(HashMap<Integer, String> mapAgeAndName) {
+        for (Map.Entry<Integer, String> entry : mapAgeAndName.entrySet()) {
+            Integer a = entry.getKey();
+            String b = entry.getValue();
+            HashMap<String, Integer> mapNameAndAge = new HashMap<>();
+            mapNameAndAge.put(b, a);
+            System.out.println(mapNameAndAge);
+        }
+    }
+
+}
